@@ -3,8 +3,11 @@ BN-GWAS is a framework to estimate the gene-phenotype network and to quantify th
 
 
 # Getting started 
-# Simulation(The code is available under the Simulation folder)
-# Applications(The code is available under the Application folder)
+# Simulation
+The code is available under the Simulation folder
+
+# Applications
+The code is available under the Application folder
 In order to use BN-GWAS to identify gene-phenotype network for trait of interest, you need to separately infer the gene-gene, gene-outcome network first, then merge them into a complete gene-phenotype network
 
 License
