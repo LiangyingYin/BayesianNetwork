@@ -8,12 +8,15 @@ The code is available under the Simulation folder
 
 # Applications
 The code is available under the Application folder
+
 In order to use BN-GWAS to identify gene-phenotype network for trait of interest, you need to separately infer the gene-gene, gene-outcome network first, then merge them into a complete gene-phenotype network
 
-License
+# License
 This project is licensed under GNU GPL v3.
 
-Authors
+# Authors
 Liangying Yin(The Chinese University of Hong Kong)
+
 Yaning Feng(The Chinese University of Hong Kong)
+
 Hon-Cheong So(The Chinese University of Hong Kong)
