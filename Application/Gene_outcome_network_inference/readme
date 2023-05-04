@@ -1,0 +1,13 @@
+This folder contain codes used for the inference of gene-outcome causal graph for single traits and multiple traits.
+1. Single trait: the studied trait is the target/outcome
+2. Multiple traits: Firstly, we need to identify the causal directions between the studied traits, which could be inferred 
+   from Mendelian Randomization or extracted from literature. Then, we picked one trait as the “ultimate” outcome (e.g., CAD). 
+   As for the ‘exposure’ trait (e.g., BMI, the trait not designated as outcome), we first calculated the polygenic risk scores (PRS) 
+   of all involved subjects based on external GWAS summary data. Then we randomly selected 5,000 subjects to build a prediction model 
+   to predict the exposure trait based on calculated PRSs. Subsequently, we applied the built model to predict the value of exposure 
+   trait for the remaining subjects. In this study, a linear model was used to predict the value of the continuous exposure trait, while 
+   a logistic model was used for the binary exposure trait. The predicted exposure trait could be regarded as a special 
+   (imputed/genetically predicted) ‘gene’. After that, we combined the predicted exposure trait with the imputed gene expression profiles 
+   to infer the “gene”-outcome causal network. 
+
+For details about our methodology, please refer to our manuscript(https://www.medrxiv.org/content/medrxiv/early/2022/12/27/2022.12.25.22283943.full.pdf)
