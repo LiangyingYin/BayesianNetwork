@@ -179,7 +179,7 @@ for(j in 1:length(index)){
  graph_est = pc_graph[[1]]
  # Revised by yinly, July 23, 2021
  # Description: calculate stability selection results for all traits
- pc_graph_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/GTEx_Selected_Update_Second/"
+ pc_graph_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/GTEx_PCSelect_CIS_Trans/"
  file_name = gsub("_resid_mat_selected.Rdata","",files[i])
  #file_name = gsub("_resid_mat_selected.Rdata","",file)
  save(pc_graph,file = paste0(pc_graph_prefix,file_name,"_Causal_Network_PCSelect.Rdata"))
