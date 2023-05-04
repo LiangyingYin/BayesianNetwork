@@ -148,18 +148,18 @@ get_univariate_test_results <-function(trait,tissue,target_outcome_name,outcome_
 # Load Dictionary for studied traits and their causal tissues
 Dict_filepath = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Whole_Blood_associated_traits.csv"
 Dict = as.matrix(fread(Dict_filepath))
-#for(i in 1:10){
+for(i in 1:nrow(Dict)){
   #i = 21
-  trait = "COVID_Confirm"
-  tissue = "Whole_Blood"
-  target_outcome_name = "COVID_Confirm"
-  outcome_index = "COVID_Confirm"
-  #trait = Dict[i,1]
-  #tissue = Dict[i,2]
-  #target_outcome_name = Dict[i,3]
-  #outcome_index = Dict[i,4]
-  #cat("Univariate test for the",i,"trait",trait,"with",tissue,"as causal tissue","\n")
-  cat("Univariate test for the trait",trait,"with",tissue,"as causal tissue","\n")
+  #trait = "COVID_Confirm"
+  #tissue = "Whole_Blood"
+  #target_outcome_name = "COVID_Confirm"
+  #outcome_index = "COVID_Confirm"
+  trait = Dict[i,1]
+  tissue = Dict[i,2]
+  target_outcome_name = Dict[i,3]
+  outcome_index = Dict[i,4]
+  cat("Univariate test for the",i,"trait",trait,"with",tissue,"as causal tissue","\n")
+  #cat("Univariate test for the trait",trait,"with",tissue,"as causal tissue","\n")
   get_univariate_test_results(trait,tissue,target_outcome_name,outcome_index)
   cat("Univariate test for",trait,"with",tissue,"as causal tissue is completed!","\n")
 #}
