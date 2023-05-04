@@ -98,7 +98,7 @@ Get_Residual_mat_for_GTEx_Network <- function(trait,tissue_type,p_thres){
   cat("The dimension of selected genes for",tissue_type,"related trait",trait,"is",dim(GTEx_selected_genes),"\n")
   fwrite(GTEx_selected_genes,paste0(Genes_file_prefix,tissue_type,"_",trait,"_Selected_Genes.csv"))
   resid_mat_selected = resid_mat[,Genes_selected]
-  resid_mat_selected_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Residual_Result_Selected_Update/"
+  resid_mat_selected_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Residual_Result_Selected_CIS_Trans/"
   resid_mat_selected_filepath = paste0(resid_mat_selected_prefix,tissue_type,"_",trait,"_resid_mat_selected.Rdata")
   save(resid_mat_selected,file=resid_mat_selected_filepath)
 }
