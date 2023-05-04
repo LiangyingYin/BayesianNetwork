@@ -1,1 +1,8 @@
-This folder contains codes for exploratory gene interaction network inference
+This folder contains codes for exploratory gene interaction network inference. The codes are listed in sequential orders. 
+
+Steps for exploratory gene interaction network inference:
+1. get deconfounded GTEx tissue-specific expression profiles by adjusting for possible confounders
+2. get GTEx tissue-specific expression profile for common genes between GTEx and imputed tissue-specific expression profile from UK Biobank
+3. get gene interaction networks by the PC algorithm and detect if the inferred networks are valid CPDAG
+4. get gene interaction networks by the CAM(Causal Additive Model)
+5. get valid gene interaction network based on step 3 and 4
