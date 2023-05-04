@@ -77,7 +77,7 @@ Get_Causal_effects_of_genes <- function(Merged_graph_name,pc_graph_name,Selected
   # load pc_graph(GTEx causal graph with pMaxs)
   # note: pc_graph is a list, the second component is the pMax matrix
   #pc_graph_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/GTEx_Selected_Update/"
-  pc_graph_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/GTEx_Network_Update/"
+  pc_graph_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/GTEx_Network_Update_Valid/" # filepath store all valid gene interaction network inferred from GTEx
   #pc_graph_name = "Whole_Blood_CAD_Causal_Network_PCSelect.Rdata"
   load(paste0(pc_graph_prefix,pc_graph_name))
   
