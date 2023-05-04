@@ -1,4 +1,4 @@
-This folder contains codes for exploratory gene interaction network inference. The codes are listed in sequential orders. 
+This folder contains codes for exploratory gene interaction network inference. The codes are listed in sequential order. 
 
 Steps for exploratory gene interaction network inference:
 1. get deconfounded GTEx tissue-specific expression profiles by adjusting for possible confounders
