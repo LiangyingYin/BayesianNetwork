@@ -267,23 +267,22 @@ Get_Causal_effects_of_outcome_related_genes <- function(bgadd,pc_graph_name,Sele
 
 Merged_graph_prefix = "/exeh_3/yinly/BayesianNetwork/04_Merge_GTEx_UKBB/Multiple_Traits/Merged_Graphs_Update/"
 pc_graph_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Exploratory_Analysis/GTEx_Network_Update_Valid/"
-# Info_filepath = "/exeh_3/yinly/BayesianNetwork/04_Merge_GTEx_UKBB/Mutiple_Traits/Effects_Calculation_Dict.csv"
-# Info_mat = as.matrix(fread(Info_filepath))
+Info_filepath = "/exeh_3/yinly/BayesianNetwork/04_Merge_GTEx_UKBB/Mutiple_Traits/Effects_Calculation_Dict.csv"
+Info_mat = as.matrix(fread(Info_filepath))
 #for(i in 1:nrow(Info_mat)){
-# for(i in 6:7){
-#     #i = 5
-#     Merged_graph_name = Info_mat[i,1]
-#     load(paste0(Merged_graph_prefix,Merged_graph_name)) # loaded object name bgadd2
-#     pc_graph_name = Info_mat[i,2]
-#     Selected_genes_name = Info_mat[i,3]
-#     target_outcome_name = Info_mat[i,4]
-#     predicted_trait_name = Info_mat[i,5]
-#     Get_Causal_effects_of_outcome_related_genes(bgadd,pc_graph_name,Selected_genes_name,target_outcome_name,Merged_graph_name,predicted_trait_name)
-# }
-Merged_graph_name = "BMI_HbA1c_COVID_Confirm_Whole_Blood.Rdata"
-load(paste0(Merged_graph_prefix,Merged_graph_name)) # loaded object name bgadd
-pc_graph_name = "Whole_Blood_AF_Causal_Network_PCSelect.Rdata"
-Selected_genes_name = "UKBB_BMI_HbA1c_COVID_Confirm_Whole_Blood.csv"
-target_outcome_name = "COVID_Confirm"
+for(i in 6:7){
+     Merged_graph_name = Info_mat[i,1]
+     load(paste0(Merged_graph_prefix,Merged_graph_name)) # loaded object name bgadd2
+     pc_graph_name = Info_mat[i,2]
+     Selected_genes_name = Info_mat[i,3]
+     target_outcome_name = Info_mat[i,4]
+     predicted_trait_name = Info_mat[i,5]
+     Get_Causal_effects_of_outcome_related_genes(bgadd,pc_graph_name,Selected_genes_name,target_outcome_name,Merged_graph_name,predicted_trait_name)
+}
+#Merged_graph_name = "BMI_HbA1c_COVID_Confirm_Whole_Blood.Rdata"
+#load(paste0(Merged_graph_prefix,Merged_graph_name)) # loaded object name bgadd
+#pc_graph_name = "Whole_Blood_AF_Causal_Network_PCSelect.Rdata"
+#Selected_genes_name = "UKBB_BMI_HbA1c_COVID_Confirm_Whole_Blood.csv"
+#target_outcome_name = "COVID_Confirm"
 #predicted_trait_name = c("ENSG_BMI","ENSG_Diabetes")
-Get_Causal_effects_of_outcome_related_genes(bgadd,pc_graph_name,Selected_genes_name,target_outcome_name,Merged_graph_name)
+#Get_Causal_effects_of_outcome_related_genes(bgadd,pc_graph_name,Selected_genes_name,target_outcome_name,Merged_graph_name)
