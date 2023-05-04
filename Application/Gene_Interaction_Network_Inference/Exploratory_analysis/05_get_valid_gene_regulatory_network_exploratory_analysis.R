@@ -81,7 +81,7 @@ get_directed_edges <- function (object, labels = NULL)
 
 GTEx_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Exploratory_Analysis/GTEx_Network_Update/"
 CAM_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Exploratory_Analysis/CAM_Network_Update/"
-file_Dict = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Exploratory_Analysis/InvalidGraphs_Update.csv"
+file_Dict = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Exploratory_Analysis/InvalidGraphs_Update.csv" # file records the inferred invalid gene interaction causal network
 Reoriented_GTEx_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Exploratory_Analysis/Reoriented_GTEx_Network_Update/"
 Dict = as.matrix(fread(file_Dict,header=TRUE))
 for(i in 1:nrow(Dict)){
