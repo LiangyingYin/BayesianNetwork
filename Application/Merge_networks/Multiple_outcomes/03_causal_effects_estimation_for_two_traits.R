@@ -259,7 +259,7 @@ Merged_graph_prefix = "/exeh_3/yinly/BayesianNetwork/04_Merge_GTEx_UKBB/Multiple
 pc_graph_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Exploratory_Analysis/GTEx_Network_Update_Valid/"
 Info_filepath = "/exeh_3/yinly/BayesianNetwork/04_Merge_GTEx_UKBB/Multiple_Traits/Effects_Calculation_Dict_Update_1April.csv"
 Info_mat = as.matrix(fread(Info_filepath))
-index <- c(3,5)
+#index <- c(3,5)
 #for(i in 1:nrow(Info_mat)){
 #for(j in 1:length(index)){
     #i <- index[j]
