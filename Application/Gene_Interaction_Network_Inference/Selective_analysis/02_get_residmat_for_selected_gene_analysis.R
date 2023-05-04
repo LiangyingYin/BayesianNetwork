@@ -17,7 +17,7 @@ Get_Residual_mat_for_GTEx_Network <- function(trait,tissue_type,p_thres){
   # Step 1: load tissue-specific residualized gene expression 
   #***************************************************************************************
   tissue_file_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Residual_Results/"
-  tissue_resid_name = "Resid_Lung_GTEx.Rdata"
+  tissue_resid_name = "Resid_Whole_Blood_GTEx.Rdata"
   load(paste0(tissue_file_prefix,tissue_resid_name))
   
   #***************************************************************************************
@@ -114,9 +114,8 @@ setwd("/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/")
 # Get_Residual_mat_for_GTEx_Network(trait,tissue_type,0.001)
 # cat("The",tissue_type,"specific GTEx network for",trait,"is completed!","\n")
 
-traits_dict = as.matrix(fread("Lung_associated_traits_updated.csv"))
-#for(i in 1:nrow(traits_dict)){
-for(i in 1:2){
+traits_dict = as.matrix(fread("Whole_Blood_associated_traits_updated.csv"))
+for(i in 1:nrow(traits_dict)){
  trait = traits_dict[i,1]
  tissue_type = traits_dict[i,2]
  cat("This is the",tissue_type,"tissue for",trait,"\n")
