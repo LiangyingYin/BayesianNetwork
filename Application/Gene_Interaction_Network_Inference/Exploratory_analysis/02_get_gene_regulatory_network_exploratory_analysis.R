@@ -22,16 +22,12 @@ library(glasso)
 library(qgraph)
 
 
-setwd("/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Exploratory_Analysis/Residmat_All_Update/")
-pc_graph_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Exploratory_Analysis/GTEx_Network_Update/"
+setwd("/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Exploratory_Analysis/Residmat_All_Update/") # directory stores all adjusted tissue-specific expression profile from GTEx
+pc_graph_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Exploratory_Analysis/GTEx_Network_Update/" # directory stores the inferred tissue-specific gene-interaction causal network by PC algorithm
 files = list.files(path = ".")
-#index = c(1,12,23,24,25,34,36,39,50,52,54,65,66)
-#index = c(13,33)
-index <- c(55,56,89,90)
-#for(i in 2:4){
+
 for(j in 1:length(index)){
     i <- index[j]
-    #i <- 1
     # Load input data resid_mat_selected
     load(files[i])
     # Apply glassoFast on resid_mat_selected to remove unlikely edges
