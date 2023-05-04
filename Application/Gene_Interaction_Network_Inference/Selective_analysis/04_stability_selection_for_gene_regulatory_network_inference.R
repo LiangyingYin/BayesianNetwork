@@ -152,7 +152,7 @@ bootstrap_pc_network3<-function(samples_data_bootstrap,times_bootstrap,cut_off)
 #***************************************************************************************
 # The file directory for resid_mat with selected genes
 #resid_mat_selected_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Residual_Results_PCSelect_Based/"
-resid_mat_selected_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Residual_Result_Selected_Update/"
+resid_mat_selected_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Residual_Result_Selected_CIS_Trans/"
 
 files = list.files(path=resid_mat_selected_prefix)
 EV_Result = matrix(0,nrow = length(files),ncol = 6)
