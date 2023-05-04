@@ -23,7 +23,7 @@ Get_Merged_BN_Graph <- function(whole_graph_name,whole_graph_selected_genes_name
     whole_graph_selected_genes = fread(paste0(whole_graph_selected_genes_prefix,whole_graph_selected_genes_name))
 
     # load pcSimple.fit with imputed gene expression and genetically-predicted "cause" trait as predictors and "effect" trait as outcome
-    UKBB_prefix = "/exeh_3/yinly/BayesianNetwork/03_UKBB_Network/02_Multiple_Traits/Order3_Results_Update/"
+    UKBB_prefix = "/exeh_3/yinly/BayesianNetwork/03_UKBB_Network/02_Multiple_Traits/Order3_Results_CIS_Trans/"
     #UKBB_name = "UKBB_BMI_CAD_Whole_Blood.Rdata"
     load(paste0(UKBB_prefix,UKBB_name))  
     genes_names = as.vector(names(pcSimple.fit$G))
