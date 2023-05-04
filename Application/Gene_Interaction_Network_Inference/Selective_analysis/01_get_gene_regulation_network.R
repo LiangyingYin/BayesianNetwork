@@ -21,9 +21,9 @@ Glasso_file_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Ti
 alpha = 0.01   #alpha (p-value) threshold for 
 numCores = 16  #number of cores for stable.fast algo in pcalg
 m.max = 4      #max. number of conditioning variables 
-PC_file_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Caulsal_Network_Results/"
+PC_file_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Causal_Network_Results/"
 length(tissues)
-for(i in 12:26){
+for(i in 1:length(tissues)){
   tissue_type_to_study = tissues[i]
   print(paste0("The present tissue is:",tissue_type_to_study))
   resid_mat = get_Residualized_GTEx(TPM_thres,low_var_thres,tissue_type_to_study,resid_file_prefix)
