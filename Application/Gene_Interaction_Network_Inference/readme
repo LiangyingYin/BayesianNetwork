@@ -1,4 +1,10 @@
 Both exploratory and selective analysis were performed for gene interaction network inference.
 
-1.Exploratory analysis: we kept genes consistent with those of the gene-phenotype causal network
-2.Selective analysis:
+1.Exploratory analysis: we kept genes consistent with those from the gene-outcome causal network. When using "PrediXcan" to predict tissue specific 
+  expression profiles, only genes with reliable predicted expression data were preserved. Since the gene-outcome causal network for the studied trait
+  was inferred from the 'predicted' tissue specific expression profile, we can only identify the causal relationship between genes with reliable predicted
+  expression data and the studied outcome.
+
+2.Selective analysis: we only selected a subset of genes from the first strategy. Suppose N_c is the number of identified directly causal genes for the 
+  studied traits. If N_c > 150, then the top 150 directly causal genes with the largest z scores will be selected. If 20 <= N_c < =150, then all directly 
+  causal genes will be selected.
