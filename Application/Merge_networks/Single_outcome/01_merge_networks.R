@@ -73,15 +73,15 @@ MergeGetx_UKBB<-function(pc_graph,pcSimple.fit,Selected_genes)
 }
 
 library(data.table)
-GTEx_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/GTEx_PCSelect/"
-UKBB_prefix = "/exeh_3/yinly/BayesianNetwork/03_UKBB_Network/Order3_Results/"
+GTEx_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Reoriented_GTEx_Network_Update/"
+UKBB_prefix = "/exeh_3/yinly/BayesianNetwork/03_UKBB_Network/Order3_Results_Update/"
 Selected_genes_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/GTEx_Selected_Genes/"
 # The dictionary that match the corresponding GTEx gene-gene network with UKBB gene-outcome
 file_Dict = "/exeh_3/yinly/BayesianNetwork/04_Merge_GTEx_UKBB/GTEx_UKBB_Merge_Dict.csv"
 Dict = as.matrix(fread(file_Dict))
-# for(i in 1:nrow(Dict)){
+for(i in 1:nrow(Dict)){
    # load GTEx object derived bootstrapped pc
-   i = 105 
+   #i = 105 
    GTEx_name = Dict[i,2]
    #GTEx_name = "Whole_Blood_CAD_Causal_Network_PCSelect.Rdata"
    load(paste0(GTEx_prefix,GTEx_name))##object name: pc_graph
@@ -94,10 +94,10 @@ Dict = as.matrix(fread(file_Dict))
    Selected_genes = fread(paste0(Selected_genes_prefix,Selected_genes_name))
    # Merge GTEx object with pcSimple.fit based on selected genes
    bgadd2 = MergeGetx_UKBB(pc_graph,pcSimple.fit,Selected_genes)
-   Merged_graph_prefix = "/exeh_3/yinly/BayesianNetwork/04_Merge_GTEx_UKBB/Results_Graphs_New/"
+   Merged_graph_prefix = "/exeh_3/yinly/BayesianNetwork/04_Merge_GTEx_UKBB/Merged_Graphs/"
    graph_name = paste0(gsub("Causal_Network_PCSelect.Rdata","",GTEx_name),"Graph.Rdata")
    save(bgadd2,file=paste0(Merged_graph_prefix,graph_name))
-# }
+}
 
 #*****************************************************************************
 # The following code is for testing only
