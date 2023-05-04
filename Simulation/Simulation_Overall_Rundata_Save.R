@@ -1,5 +1,6 @@
 ######################################################################################
 # Load the source code and function code
+# Please change the path to be consistent with your local path
 source("/exeh_4/yaning_feng/04_Simulation/FinalVersion/Rundata/Re-OrganizeProgram/Simulation_Extension_Functions/Simulation_ExtensionFunction_Fisher_IDA_topK.R")
 source("/exeh_4/yaning_feng/04_Simulation/FinalVersion/Rundata/Re-OrganizeProgram/Simulation_Extension_Functions/Simulation_ExtensionFunction_Bootstrap.R")
 source("/exeh_4/yaning_feng/04_Simulation/FinalVersion/Rundata/Re-OrganizeProgram/Simulation_Extension_Functions/Simulation_ExtensionFunction_Mediator_functions.R")
