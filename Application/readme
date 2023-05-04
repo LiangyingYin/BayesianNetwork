@@ -1,9 +1,9 @@
 The folder contains codes we used to infer the causal graphs for studied continuous and binary traits in the UK Biobank. To use the code for the inference of gene-outcome causal network, we need to "predict" the tissue specific gene expression profiles from raw genotypes using "PredXican" first(https://github.com/hakyimlab/PrediXcan). 
 
 Steps to estimate the causal graphs for studied traits
-1. Gene-gene causal graph inference
-2. Gene-outcome causal graph inference
-3. Merge Gene-gene and gene-outcome causal graphs
+1. Gene_Interaction_Network_Inference
+2. Gene_outcome_network_inference
+3. Merge_graphs
 
 
 Note: Steps 1 and 2 are interchangable
