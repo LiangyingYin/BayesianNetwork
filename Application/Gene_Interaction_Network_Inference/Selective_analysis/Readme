@@ -1,6 +1,8 @@
-This folder contains codes for selective gene interaction network inference. The codes are listed in sequential order. 
+This folder contains codes for selective gene interaction network inference and for stability selection. The codes are listed in sequential order. 
 
 Steps for selective gene interaction network inference:
 1. get deconfounded GTEx tissue-specific expression profiles by adjusting for possible confounders
 2. get GTEx tissue-specific expression profile for direct causal genes for the studied traits
 3. get gene interaction networks by the bootstrapped-PC algorithm
+
+04_stability_selection_for_gene_regulatory_network_inference.R: code for stability analysis
