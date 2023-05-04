@@ -82,7 +82,6 @@ file_Dict = "/exeh_3/yinly/BayesianNetwork/04_Merge_GTEx_UKBB/GTEx_UKBB_Merge_Di
 Dict = as.matrix(fread(file_Dict))
 for(i in 1:nrow(Dict)){
    # load GTEx object derived bootstrapped pc
-   #i = 105 
    GTEx_name = Dict[i,2]
    #GTEx_name = "Whole_Blood_CAD_Causal_Network_PCSelect.Rdata"
    load(paste0(GTEx_prefix,GTEx_name))##object name: pc_graph
@@ -110,7 +109,7 @@ for(i in 1:nrow(Dict)){
 #Selected_genes_name = "Artery_Coronary_CAD_Selected_Genes.csv"
 #Selected_genes = fread(paste0(Selected_genes_prefix,Selected_genes_name))
 # Merge GTEx object with pcSimple.fit based on selected genes
-#Merged_graph_prefix = "/exeh_3/yinly/BayesianNetwork/04_Merge_GTEx_UKBB/Results_Graphs_New/"
+#Merged_graph_prefix = "/exeh_3/yinly/BayesianNetwork/04_Merge_GTEx_UKBB/Merged_Graphs/"
 #bgadd2 = MergeGetx_UKBB(pc_graph,pcSimple.fit,Selected_genes)
 #graph_name = paste0(gsub("Causal_Network_PCSelect.Rdata","",GTEx_name),"Graph.Rdata")
 #save(bgadd2,file=paste0(Merged_graph_prefix,graph_name))
