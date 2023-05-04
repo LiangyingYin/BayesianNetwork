@@ -146,7 +146,7 @@ get_univariate_test_results <-function(trait,tissue,target_outcome_name,outcome_
 }
 
 # Load Dictionary for studied traits and their causal tissues
-Dict_filepath = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Adipose_Subcutaneous_associated_traits.csv"
+Dict_filepath = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Whole_Blood_associated_traits.csv"
 Dict = as.matrix(fread(Dict_filepath))
 #for(i in 1:10){
   #i = 21
