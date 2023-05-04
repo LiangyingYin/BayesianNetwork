@@ -75,7 +75,8 @@ MergeGetx_UKBB<-function(pc_graph,pcSimple.fit,Selected_genes)
 library(data.table)
 GTEx_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/Reoriented_GTEx_Network_Update/"
 UKBB_prefix = "/exeh_3/yinly/BayesianNetwork/03_UKBB_Network/Order3_Results_Update/"
-Selected_genes_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/GTEx_Selected_Genes/"
+#Selected_genes_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/GTEx_Selected_Genes/" # filepath for selective analysis
+Selected_genes_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/GTEx_All_Selected_Genes_CIS_Trans_Update # filepath for exploratory analysis
 # The dictionary that match the corresponding GTEx gene-gene network with UKBB gene-outcome
 file_Dict = "/exeh_3/yinly/BayesianNetwork/04_Merge_GTEx_UKBB/GTEx_UKBB_Merge_Dict.csv"
 Dict = as.matrix(fread(file_Dict))
