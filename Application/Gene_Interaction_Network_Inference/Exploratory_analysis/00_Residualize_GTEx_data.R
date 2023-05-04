@@ -7,7 +7,7 @@
 
 TPM_thres = 0.2  ##can change; genes with median TPM lower than this value are removed 
 low_var_thres = 0.1  ## genes with variance in expression lower than this value will be removed
-tissue_type_to_study = "Adipose - Subcutaneous"
+tissue_type_to_study = "Whole Blood"
 
 
 #*************************************
@@ -25,7 +25,7 @@ library(parallel)
 
 
 
-load("/exeh_4/sohc/network_GWAS/GTEx_RNA_seq_transposed_df.Rdata") 
+load("/exeh_4/sohc/network_GWAS/GTEx_RNA_seq_transposed_df.Rdata") # transposed GTEx RNA-seq data downloaded from GTEx(https://storage.googleapis.com/gtex_analysis_v7/rna_seq_data/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_tpm.gct.gz)
 attribute = fread("/exeh_4/sohc/network_GWAS/GTEx_v7_Annotations_SampleAttributesDS.txt", header=TRUE) # downloaded data from GTEx(https://storage.googleapis.com/gtex_analysis_v7/annotations/GTEx_v7_Annotations_SampleAttributesDS.txt)
 ##filter away genes with low TPM
 #****************************************************
@@ -94,7 +94,7 @@ finaldf3 = merge(finaldf3,  subject_pheno, by = "SUBJID")
 library(gmodels)
 #pca_res = fast.prcomp(finaldf3[,3:(ind_start_attribute-1)] ) 
 #save(pca_res, file= "/exeh_4/sohc/network_GWAS/R_code_BayesianNet/PCA_result_GTEx_expression.Rdata") 
-load("/exeh_4/sohc/network_GWAS/R_code_BayesianNet/PCA_result_GTEx_expression.Rdata")
+load("/exeh_4/sohc/network_GWAS/R_code_BayesianNet/PCA_result_GTEx_expression.Rdata") # PCA analysis results for the GTEx expression.
 
 PCA = data.frame(pca_res$x[,1:10]) ##Cf https://rpubs.com/skydome20/R-Note7-PCA
 finaldf3 <- data.frame(finaldf3, PCA) 
@@ -142,4 +142,4 @@ for (i in 1:no_genes) {
 detach(final_df_SingleTissue) 
 
 colnames(resid_mat) <- colnames(final_df_SingleTissue)[3:(ind_start_attribute-1)]
-save(resid_mat, file= "GTEx_RNA_seq_Adipose_Subcutaneous_PCsexAge_etc.Rdata") 
+save(resid_mat, file= "Resid_Whole_Blood_GTEx.Rdata") 
