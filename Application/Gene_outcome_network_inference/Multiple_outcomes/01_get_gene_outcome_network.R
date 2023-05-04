@@ -71,7 +71,7 @@ get_Causal_Network_Based_On_UKBB <- function(target_outcome_name,outcome_index,o
   predicted_pheno_dir = "/exeh_3/yinly/BayesianNetwork/03_UKBB_Network/02_Multiple_Traits/Genetically_Predicted_BMI.csv"
   #pheno_dir = "/exeh_3/yinly/UKBB/01_Data/UKBB_Traits_with_ID_July29.csv"
   #pheno_dir = "/exeh_3/yinly/BayesianNetwork/03_UKBB_Network/01_Single_Trait/Data/UKBB_Extracted_Traits_with_FID_updated.csv"
-  pheno_dir = "/exeh_3/yinly/BayesianNetwork/03_UKBB_Network/01_Single_Trait/Data/UKBB_Cov19.txt"
+  pheno_dir = "/exeh_3/yinly/BayesianNetwork/03_UKBB_Network/01_Single_Trait/Data/UKBB_Extracted_Traits_31March2022.txt"
   #___  END OF INPUT__________________________________________
   
   expr = fread(expression_file_dir )
@@ -262,13 +262,4 @@ outcome_name = "Diabetes"
 cat("This is the trait:",outcome_name,"\n")
 get_Causal_Network_Based_On_UKBB(target_outcome_name,outcome_index,outcome_name,0.2)
 cat("The trait:",outcome_name,"is completed!\n")
-#Traits = as.matrix(fread("/exeh_3/yinly/BayesianNetwork/03_UKBB_Network/01_Single_Trait/Data/Binary_Traits_Dict.csv",header = TRUE))
-# Define studied trait
-# CAD
-#i = 6
-#for(i in 1:nrow(Traits)){
-#  i = 6
-#  cat("This is the",i,"trait:",Traits[i,3],"\n")
-#  get_Causal_Network_Based_On_UKBB(Traits[i,1],Traits[i,2],Traits[i,3],0.2)
-#  cat("The",i,"trait:",Traits[i,3],"is completed!","\n")
-#}
+
