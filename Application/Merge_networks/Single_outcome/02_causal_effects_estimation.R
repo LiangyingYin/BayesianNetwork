@@ -70,26 +70,27 @@ Get_Causal_effects_of_genes <- function(Merged_graph_name,pc_graph_name,Selected
   # Step 1: load graph related variables
   #*******************************************************
   # load bgadd2(whole causal graph)
-  Merged_graph_prefix = "/exeh_3/yinly/BayesianNetwork/04_Merge_GTEx_UKBB/Merged_Graphs_Update/"
+  Merged_graph_prefix = "/exeh_3/yinly/BayesianNetwork/04_Merge_GTEx_UKBB/Merged_Graphs/"
   #Merged_graph_name = "Whole_Blood_CAD_Graph.Rdata"
   load(paste0(Merged_graph_prefix,Merged_graph_name))##loaded object name: bgadd2
   
   # load pc_graph(GTEx causal graph with pMaxs)
   # note: pc_graph is a list, the second component is the pMax matrix
-  pc_graph_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/GTEx_Selected_Update_Second/"
+  #pc_graph_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/GTEx_Selected_Update/"
+  pc_graph_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/GTEx_Network_Update/"
   #pc_graph_name = "Whole_Blood_CAD_Causal_Network_PCSelect.Rdata"
   load(paste0(pc_graph_prefix,pc_graph_name))
   
   # load Selected_genes with zMin for UKBB graph
-  Selected_genes_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/GTEx_Selected_Genes_Update/"
+  Selected_genes_prefix = "/exeh_3/yinly/BayesianNetwork/02_GTex_Network/01_Single_Tissue/GTEx_Selected_Genes/"
   #Selected_genes_name = "Whole_Blood_CAD_Selected_Genes.csv"
   Selected_genes = fread(paste0(Selected_genes_prefix,Selected_genes_name))
   
   #**************************************************************************
   # Step 2: load imputed gene expression data and real phenotypes from UKBB
   #**************************************************************************
-  #expression_file_dir = "/exeh_3/yinly/BayesianNetwork/01_PrediXican/Result/Filtered/UKBB_Whole_Blood_CIS_Trans_expression.txt"
-  expression_file_dir = "/exeh_3/yinly/BayesianNetwork/01_PrediXican/Result/Filtered/UKBB_Lung_predicted_expression.txt"
+  expression_file_dir = "/exeh_3/yinly/BayesianNetwork/01_PrediXican/Result/Filtered/UKBB_Whole_Blood_CIS_Trans_expression.txt"
+  #expression_file_dir = "/exeh_3/yinly/BayesianNetwork/01_PrediXican/Result/Filtered/UKBB_Lung_predicted_expression.txt"
   expr = fread(expression_file_dir )
   # pick out selected genes
   selected_genes_Ensem = Selected_genes$genes_names
@@ -217,11 +218,11 @@ Get_Causal_effects_of_genes <- function(Merged_graph_name,pc_graph_name,Selected
 Info_filepath = "/exeh_3/yinly/BayesianNetwork/04_Merge_GTEx_UKBB/GTEx_UKBB_Merge_Dict_Update_1April.csv"
 Info_mat = as.matrix(fread(Info_filepath))
 #index = c(86,90,96,98,101,106,107,112,114,117,126)
-index <- c(53,54) # 53-54 lung, 86-87 whole blood
-#for(i in 135:138){
-for(j in 1:length(index)){
-  #i = 68
-  i = index[j]
+#index <- c(53,54) # 53-54 lung, 86-87 whole blood
+# the index for whole blood associated traits: 71:125
+for(i in 71:125){
+#for(j in 1:length(index)){
+  #i = index[j]
   Merged_graph_name = Info_mat[i,5] ##the column index for merged graph
   pc_graph_name = Info_mat[i,2] ##the column index for GTEx graph
   Selected_genes_name = Info_mat[i,4] ##the column index for selected genes
