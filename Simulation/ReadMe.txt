@@ -5,4 +5,4 @@ pcalg,CePa,reshape2,data.table,dplyr,coop,parallel,graph,grid,Rgraphviz,Corbi,gl
 
 3) If you want to run the overall simulation code, please run 'Simulation_Overall_Rundata.R'.  Since We included all the comparison in our simulation program, it would be a bit time-consuming. 
 
-4) If you just want to get the main idea of our framework, please choose to run 'Simulation_ToyExample.R' to save time. (Usually can be finished within 30 mins)
+4) If you just want to get the main idea of our framework, please choose to run 'Simulation_ToyExample.R' to save time. (Usually, this can be finished within 30 mins)
