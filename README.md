@@ -9,10 +9,10 @@ To successfully run the codes, you need to install all dependency R packages lis
 
 # Getting started 
 # Simulation
-The code is available under the Simulation folder. 
+The code for simulations is available under the Simulation folder. 
 
 # Applications
-The code is available under the Application folder. Due to privacy issues, the original data from UK Biobank is not provided here.
+The code for real data applcations(UK Biobank data) is available under the Application folder. UK biobank data is available to any researchers who formally apply for the data. However, the data is not publicly available due to privacy concerns. 
 
 In order to use BN-GWAS to identify gene-phenotype network for trait of interest, you need to separately infer the gene-gene, gene-outcome network first, then merge them into a complete gene-phenotype network.
 
