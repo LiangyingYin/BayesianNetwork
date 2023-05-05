@@ -14,7 +14,7 @@ The code is available under the Simulation folder.
 # Applications
 The code is available under the Application folder. Due to privacy issues, the original data from UK Biobank is not provided here.
 
-In order to use BN-GWAS to identify gene-phenotype network for trait of interest, you need to separately infer the gene-gene, gene-outcome network first, then merge them into a complete gene-phenotype network
+In order to use BN-GWAS to identify gene-phenotype network for trait of interest, you need to separately infer the gene-gene, gene-outcome network first, then merge them into a complete gene-phenotype network.
 
 # Causalgraphs
 This folder contains the inferred causal graphs for some studied traits.
