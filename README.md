@@ -5,7 +5,7 @@ BN-GWAS is a framework to estimate the gene-phenotype network and to quantify th
 # System Requirement
 The R source codes are expected to work under Mac, Linux and Windows operation systems.The codes have been tested on R version 3.4.4 and 3.6.1 and are expected to work on newer R versions as well. 
 # Installation guide
-To successfully run the codes, you need to install all dependency R packages listed in the Rcode files, e.g., pcalg, glassoFast, graph,coop, ect. Typical install time depends on how many packages you need to install in R. The installation time for all required R pacakges should be less than 1 hour on a desktop computer. To speed up the installation process, you are recommended to install miniconda(https://docs.conda.io/en/latest/miniconda.html) and mamba on your desktop(https://github.com/mamba-org/mamba). Please be kindly noted that traditional way of package installation also works.
+To successfully run the codes, you need to install all dependency R packages listed in the Rcode files, e.g., pcalg, CePa, reshape2, data.table, dplyr, parallel, grid, Rgraphviz, Corbi, glmnet, MLmetrics, MASS, igraph, stats, RNOmni, ParallelPC, glasso, glassoFast, graph,RBGL, epiR, coop, RiskPortfolios, matrixcalc, CVglasso, iterators, foreach, doParallel,rlist. Typical install time depends on how many packages you need to install in R. The installation time for all required R pacakges should be less than 1 hour on a desktop computer. To speed up the installation process, you are recommended to install miniconda(https://docs.conda.io/en/latest/miniconda.html) and mamba on your desktop(https://github.com/mamba-org/mamba). Please be kindly noted that traditional way of package installation also works.
 
 # Getting started 
 # Simulation
