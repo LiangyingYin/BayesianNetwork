@@ -1,34 +1,5 @@
-# Please make sure you have install all the packages that are needed in our project.
-library(pcalg)
-library(CePa)
-library(reshape2)
-library(data.table)
-library(dplyr)
-library(coop)
-library(parallel)
-library(graph)
-library(grid)
-library(Rgraphviz)
-library(Corbi)
-library(glmnet)
-library(MLmetrics)
-library(MASS)
-library(igraph)  
-library(stats)
-library(RNOmni)
-library(ParallelPC)
-library(glasso)
-library(glassoFast)
-library(RBGL)
-library(epiR)
-library(RiskPortfolios)
-library(matrixcalc)
-library(CVglasso)
-library(iterators)
-library(foreach)
-library(doParallel)
-library(rlist)
-library(Matrix)
+# Please install all the related R packages that are needed in our project.
+pcalg,CePa,reshape2,data.table,dplyr,coop,parallel,graph,grid,Rgraphviz,Corbi,glmnet,MLmetrics,MASS,igraph,stats,RNOmni,ParallelPC,glasso,glassoFast,RBGL,epiR,RiskPortfolios,matrixcalc,CVglasso,iterators,foreach,doParallel,rlist,Matrix
 
 # Please amend the root path as your local path.
 # Run Simulation_Overall_Rundata.R to generate the simulation results.
