@@ -17,7 +17,7 @@ The code is available under the Application folder. Due to privacy issues, the o
 In order to use BN-GWAS to identify gene-phenotype network for trait of interest, you need to separately infer the gene-gene, gene-outcome network first, then merge them into a complete gene-phenotype network
 
 # Causalgraphs
-This folder demonstrates the inferred causal graphs for some studied traits
+This folder contains the inferred causal graphs for some studied traits.
 
 # License
 This project is licensed under GNU GPL v3.
