@@ -7,4 +7,5 @@ Steps to estimate the causal graphs for studied traits
 2. Gene_Interaction_Network_Inference
 3. Merge_networks
 
-
+Note: the filepaths should be revised accordingly if run the code locally. Due to privacy issues, we could not provide the original UK Biobank data used 
+for the analysis. If there are any problems, please feel free to contact the authors.
