@@ -6,7 +6,7 @@
 # Load the source code and function code
 # /opt/R-3.6.1/bin/R
 ROOT_FOLDER = "/exeh_4/yaning_feng/04_Simulation/Github_code/BackupV1.1/"
-FOLDER_PATH = paste0(ROOT_FOLDER,"ToyExample/") # Please amend this path to your local path
+FOLDER_PATH = paste0(ROOT_FOLDER,"ToyExample/") # Please change this path to your local path for loading the related functions successfully
 
 # Please change the random DAG if needed for testing, and the gene_index, snp_index should be changed accordingly
 load(paste0(FOLDER_PATH,"/randomDAGs/randomDAG_sim.Rdata")) 
@@ -62,7 +62,7 @@ eMat_g_tmp_rnorm_sd = 2  #gene expression data error variance
 prop_direct_causal_genes = 1/5
 
 #some parameters about bootstrap
-times_bootstrap = 1
+times_bootstrap = 1 
 cut_off = 0.6
 
 
