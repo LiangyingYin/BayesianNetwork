@@ -10,4 +10,7 @@ Note: 1)Please change the root path to your own local path to successfully load 
       3)If you just want to get the main idea of our framework, please choose to run 'Simulation_ToyExample.R' under folder "ToyExample" to save time. (Usually, this can be finished within 30 mins)
 
 5 Toy example: we have provided a toy example under foler "ToyExample" to help illustrate our framework.
+  1) R code: Simulation_ToyExample.R
+  2) Expected output: simulation_ToyExample_res1.csv, simulation_ToyExample_res2.csv
+  3) Expected running time: ~30min
 
