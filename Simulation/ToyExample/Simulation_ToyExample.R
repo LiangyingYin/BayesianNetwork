@@ -1,10 +1,15 @@
 ######################################################################################
 # parameter setting for this ToyExample: 
-# SNP700_Gene70_Sample100000_sample_num_Getx8000_randomDAG_prob0.05_randomDAG_lB-0.3
+# SNP:700
+# Gene:70
+# overall sample size: 100000
+# sample size for tissue-specific expression profiles(GTEx): 8000
+# graph density for randomly generated DAG(directed acyclic graph): 0.05
+# lower bound(lB) of the absolute edge weights for randomly generated DAG:0.3
 
 ######################################################################################
 # Load the source code and function code
-# /opt/R-3.6.1/bin/R
+# /opt/R-3.6.1/bin/R # R version used
 ROOT_FOLDER = "/exeh_4/yaning_feng/04_Simulation/Github_code/BackupV1.1/"
 FOLDER_PATH = paste0(ROOT_FOLDER,"ToyExample/") # Please change this path to your local path for loading the related functions successfully
 
