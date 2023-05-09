@@ -1,0 +1,2 @@
+1. We provided three different randomDAGs (previously generated) here for the toy example to save your time for running the program.
+2. Please be noted that if you change the input randomDAG (eg. from 'randomDAG_sim.Rdata' to 'randomDAG_sim1.Rdata'), the expected results will change accordingly
