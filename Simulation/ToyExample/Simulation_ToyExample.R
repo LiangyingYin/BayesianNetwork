@@ -280,4 +280,4 @@ col_names = c("Cor_TureIDA_EstIDA_Pearson",
 dt_res = rbind(col_names,comp_res)
 dt_res = as.data.table(dt_res)
 fwrite(dt_res,file = paste0(FOLDER_PATH,"simulation_ToyExample_res.csv"))
-
+# The output file shoule be in the same folder, and should be the same with the expected output since we had set seeds for all of the random process.
